@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
+import Reveal from './Reveal'
 
 const materials = [
   'Ferro e acciaio',
@@ -49,6 +50,7 @@ export default function Materials() {
     <section id="materiali" className="section-y bg-ink-soft">
       <div className="container-page">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,22rem)_1fr] lg:gap-16 xl:grid-cols-[minmax(0,26rem)_1fr] xl:gap-20">
+          <Reveal>
           <div className="text-center lg:sticky lg:top-28 lg:text-left">
             <span className="font-mono text-xs uppercase tracking-widest text-brand-green">
               Materiali trattati
@@ -68,7 +70,9 @@ export default function Materials() {
               Chiedi una valutazione
             </a>
           </div>
+          </Reveal>
 
+          <Reveal delay={100}>
           <ul className="grid grid-cols-2 gap-2 lg:hidden">
             {preview.map((material) => (
               <MaterialItem key={material} material={material} />
@@ -86,18 +90,21 @@ export default function Materials() {
               </button>
             </li>
           </ul>
+          </Reveal>
 
+          <Reveal delay={100}>
           <ul className="hidden grid-cols-3 gap-3 lg:grid">
             {materials.map((material) => (
               <MaterialItem key={material} material={material} />
             ))}
           </ul>
+          </Reveal>
         </div>
       </div>
 
       {showAll && (
         <div
-          className="fixed inset-0 z-[100] flex flex-col bg-ink/95 backdrop-blur-sm lg:hidden"
+          className="fixed inset-0 z-[100] flex flex-col bg-ink/95 backdrop-blur-sm animate-[fade-in_0.3s_ease-out] lg:hidden"
           role="dialog"
           aria-modal="true"
           aria-label="Elenco completo materiali ritirati"

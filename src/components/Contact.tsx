@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react'
 import { COMPANY_ADDRESS_FULL, COMPANY_ADDRESS_SHORT, COMPANY_MAPS_QUERY } from '../data/company'
 import Logo from './Logo'
+import Reveal from './Reveal'
 
 export default function Contact() {
   const [name, setName] = useState('')
@@ -17,6 +18,7 @@ export default function Contact() {
   return (
     <section id="contatti" className="section-y bg-ink">
       <div className="container-page">
+        <Reveal>
         <div className="overflow-hidden border border-paper/10 lg:grid lg:grid-cols-2">
           <div className="flex flex-col justify-between gap-8 bg-ink-soft px-5 py-10 sm:gap-10 sm:px-10 sm:py-14 lg:px-12 lg:py-16 xl:px-16 xl:py-20">
             <div className="text-center lg:text-left">
@@ -147,6 +149,7 @@ export default function Contact() {
             </form>
           </div>
         </div>
+        </Reveal>
       </div>
     </section>
   )

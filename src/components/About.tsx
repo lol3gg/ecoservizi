@@ -1,8 +1,11 @@
+import Reveal from './Reveal'
+
 export default function About() {
   return (
     <section id="chi-siamo" className="border-y border-paper/10 bg-ink-soft py-12 sm:py-14 lg:py-16">
       <div className="container-page">
-        <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[minmax(0,10rem)_1fr] lg:gap-12 xl:gap-16">
+        <Reveal>
+          <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[minmax(0,10rem)_1fr] lg:gap-12 xl:gap-16">
           <div className="text-center lg:text-left">
             <span className="font-mono text-xs uppercase tracking-widest text-brand-green">La nostra storia</span>
             <p className="mt-2 font-display text-5xl font-bold leading-none text-brand-green sm:text-6xl">2007</p>
@@ -23,7 +26,8 @@ export default function About() {
               serietà, rapidità e documentazione in regola.
             </p>
           </div>
-        </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   )

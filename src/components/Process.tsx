@@ -1,3 +1,4 @@
+import Reveal from './Reveal'
 import SectionIntro from './SectionIntro'
 
 const steps = [
@@ -25,17 +26,19 @@ export default function Process() {
   return (
     <section id="come-funziona" className="section-y bg-ink">
       <div className="container-page">
-        <SectionIntro
-          align="center"
-          label="Il processo"
-          title="Come funziona un ritiro"
-        />
+        <Reveal>
+          <SectionIntro
+            align="center"
+            label="Il processo"
+            title="Come funziona un ritiro"
+          />
+        </Reveal>
 
         <div className="mt-12 grid grid-cols-1 gap-6 lg:mt-16 lg:grid-cols-3 lg:gap-8">
-          {steps.map((step) => (
+          {steps.map((step, index) => (
+            <Reveal key={step.number} delay={index * 100}>
             <article
-              key={step.number}
-              className="ticket-edge flex flex-col border border-paper/10 bg-ink-soft p-6 pt-5 sm:p-8 sm:pt-6 lg:p-8 lg:pt-7"
+              className="interactive-lift ticket-edge flex h-full flex-col border border-paper/10 bg-ink-soft p-6 pt-5 sm:p-8 sm:pt-6 lg:p-8 lg:pt-7"
             >
               <span className="font-display text-4xl font-bold text-brand-green min-[375px]:text-5xl lg:text-6xl">
                 {step.number}
@@ -47,6 +50,7 @@ export default function Process() {
                 {step.description}
               </p>
             </article>
+            </Reveal>
           ))}
         </div>
       </div>

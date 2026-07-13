@@ -1,4 +1,5 @@
 import { asset } from '../lib/asset'
+import Reveal from './Reveal'
 import SectionIntro from './SectionIntro'
 
 type Service = {
@@ -48,25 +49,27 @@ export default function Services() {
   return (
     <section id="servizi" className="section-y bg-ink">
       <div className="container-page">
-        <SectionIntro
-          align="center"
-          wide
-          label="Cosa facciamo"
-          title="Quattro servizi, un solo referente"
-          description="Affidabilità, puntualità e rispetto dell'ambiente. Soluzioni complete per la gestione dei rifiuti ferrosi, pensate per aziende, artigiani e privati che hanno bisogno di un servizio conforme alle normative."
-        />
+        <Reveal>
+          <SectionIntro
+            align="center"
+            wide
+            label="Cosa facciamo"
+            title="Quattro servizi, un solo referente"
+            description="Affidabilità, puntualità e rispetto dell'ambiente. Soluzioni complete per la gestione dei rifiuti ferrosi, pensate per aziende, artigiani e privati che hanno bisogno di un servizio conforme alle normative."
+          />
+        </Reveal>
 
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:mt-16 lg:gap-8 xl:gap-10">
-          {services.map((service) => (
+          {services.map((service, index) => (
+            <Reveal key={service.code} delay={index * 80}>
             <article
-              key={service.code}
-              className="ticket-edge flex flex-col overflow-hidden border border-paper/10 bg-ink-soft pt-1 transition-colors hover:border-paper/20"
+              className="interactive-lift group ticket-edge flex h-full flex-col overflow-hidden border border-paper/10 bg-ink-soft pt-1 transition-colors hover:border-paper/20"
             >
               <div className="aspect-[16/9] w-full overflow-hidden bg-ink-elevated">
                 <img
                   src={service.image}
                   alt={service.alt}
-                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-[1.02]"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   loading="lazy"
                   decoding="async"
                 />
@@ -83,6 +86,7 @@ export default function Services() {
                 </p>
               </div>
             </article>
+            </Reveal>
           ))}
         </div>
       </div>

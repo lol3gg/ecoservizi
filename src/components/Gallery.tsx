@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import { galleryImages, GALLERY_PREVIEW_COUNT } from '../data/gallery'
+import Reveal from './Reveal'
 import SectionIntro from './SectionIntro'
 
 export default function Gallery() {
@@ -36,15 +37,18 @@ export default function Gallery() {
   return (
     <section id="galleria" className="section-y bg-ink-soft">
       <div className="container-page">
-        <SectionIntro
-          align="center"
-          wide
-          label="Dal nostro deposito"
-          labelClassName="text-brand-green"
-          title="Le nostre attività sul campo"
-          description="Ritiri, stoccaggio e gestione dei materiali nel nostro deposito in Via del Lavoro, Pian di Rose (Fossombrone). Ecco alcune immagini delle operazioni quotidiane."
-        />
+        <Reveal>
+          <SectionIntro
+            align="center"
+            wide
+            label="Dal nostro deposito"
+            labelClassName="text-brand-green"
+            title="Le nostre attività sul campo"
+            description="Ritiri, stoccaggio e gestione dei materiali nel nostro deposito in Via del Lavoro, Pian di Rose (Fossombrone). Ecco alcune immagini delle operazioni quotidiane."
+          />
+        </Reveal>
 
+        <Reveal delay={120}>
         <div className="mt-10 grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 lg:mt-14 lg:grid-cols-4 lg:gap-4 xl:gap-5">
           {preview.map((image) => (
             <button
@@ -54,7 +58,7 @@ export default function Gallery() {
                 setOpen(true)
                 setActiveIndex(galleryImages.findIndex((img) => img.id === image.id))
               }}
-              className="ticket-edge group relative aspect-[4/3] overflow-hidden border border-paper/15 bg-ink-soft pt-1 text-left"
+              className="ticket-edge group relative aspect-[4/3] overflow-hidden border border-paper/15 bg-ink-soft pt-1 text-left transition-transform duration-300 hover:scale-[1.02]"
             >
               <img
                 src={image.src}
@@ -90,6 +94,7 @@ export default function Gallery() {
             </span>
           </button>
         </div>
+        </Reveal>
       </div>
 
       {open && (

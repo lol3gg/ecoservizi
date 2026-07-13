@@ -23,7 +23,7 @@ export default function Header() {
   const closeMenu = () => setMenuOpen(false)
 
   return (
-    <header className="safe-top fixed inset-x-0 top-0 z-50 border-b border-paper/10 bg-ink/95 backdrop-blur supports-[backdrop-filter]:bg-ink/90">
+    <header className="safe-top fixed inset-x-0 top-0 z-50 border-b border-paper/10 bg-ink/95 backdrop-blur transition-[background-color,box-shadow] duration-300 supports-[backdrop-filter]:bg-ink/90">
       <div className="container-page grid grid-cols-3 items-center py-3 lg:flex lg:justify-between lg:gap-4 lg:py-4">
         <a
           href="#home"
@@ -40,7 +40,7 @@ export default function Header() {
               <li key={item.href}>
                 <a
                   href={item.href}
-                  className="font-mono text-xs uppercase tracking-widest text-steel transition-colors hover:text-paper"
+                  className="nav-link font-mono text-xs uppercase tracking-widest text-steel transition-colors hover:text-paper"
                 >
                   {item.label}
                 </a>

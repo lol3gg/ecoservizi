@@ -26,20 +26,20 @@ export default function Hero() {
         <div className="absolute inset-0 flex items-end pb-6 sm:items-center sm:pb-0">
           <div className="container-page w-full">
             <div className="max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl">
-              <span className="block font-mono text-[10px] uppercase leading-snug tracking-[0.15em] text-brand-green min-[375px]:text-xs sm:tracking-[0.2em]">
+              <span className="hero-enter hero-enter-1 block font-mono text-[10px] uppercase leading-snug tracking-[0.15em] text-brand-green min-[375px]:text-xs sm:tracking-[0.2em]">
                 Commercio metalli ferrosi e non — Marche (PU)
               </span>
-              <h1 className="mt-3 font-display text-[2rem] font-bold uppercase leading-[0.95] tracking-tight text-paper min-[375px]:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem]">
+              <h1 className="hero-enter hero-enter-2 mt-3 font-display text-[2rem] font-bold uppercase leading-[0.95] tracking-tight text-paper min-[375px]:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem]">
                 Il ferro che scartate,
                 <br />
                 lo gestiamo noi.
               </h1>
-              <p className="mt-4 max-w-lg text-sm leading-relaxed text-paper/80 sm:mt-5 sm:text-base md:text-lg lg:max-w-xl lg:text-xl lg:leading-relaxed">
+              <p className="hero-enter hero-enter-3 mt-4 max-w-lg text-sm leading-relaxed text-paper/80 sm:mt-5 sm:text-base md:text-lg lg:max-w-xl lg:text-xl lg:leading-relaxed">
                 Raccolta, trasporto e valutazione di rifiuti ferrosi e metallici per
                 aziende, artigiani e privati. Ritiro rapido, mezzi autorizzati e
                 documentazione ambientale in regola a ogni conferimento.
               </p>
-              <div className="mt-6 flex flex-col gap-3 min-[375px]:flex-row min-[375px]:flex-wrap sm:mt-8 lg:mt-10">
+              <div className="hero-enter hero-enter-4 mt-6 flex flex-col gap-3 min-[375px]:flex-row min-[375px]:flex-wrap sm:mt-8 lg:mt-10">
                 <a
                   href="#contatti"
                   className="btn-mobile-full tap-target bg-brand-green px-6 py-3.5 text-sm font-semibold uppercase tracking-wide text-ink transition-opacity hover:opacity-90 sm:inline-block sm:w-auto sm:px-8 sm:py-3.5 sm:text-base lg:px-10"

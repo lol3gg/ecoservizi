@@ -1,7 +1,10 @@
+import Reveal from './Reveal'
+
 export default function Testimonial() {
   return (
     <section className="section-y bg-ink-soft">
       <div className="container-page">
+        <Reveal>
         <div className="mx-auto max-w-4xl xl:max-w-5xl">
           <div className="ticket-edge border border-paper/10 bg-ink px-5 py-8 pt-7 sm:px-10 sm:py-10 sm:pt-8 lg:px-14 lg:py-14 lg:pt-11">
             <span className="block text-center font-mono text-xs uppercase tracking-widest text-rust">
@@ -14,6 +17,7 @@ export default function Testimonial() {
             </blockquote>
           </div>
         </div>
+        </Reveal>
       </div>
     </section>
   )

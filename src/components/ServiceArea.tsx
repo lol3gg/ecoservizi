@@ -1,4 +1,5 @@
 import { COMPANY_ADDRESS_SHORT, COMPANY_MAPS_EMBED, COMPANY_MAPS_URL } from '../data/company'
+import Reveal from './Reveal'
 
 const comuni = ['Fossombrone', 'Fano', 'Pesaro', 'Urbino', 'Urbania', 'Cagli', 'Fermignano', 'Mondavio']
 
@@ -32,7 +33,8 @@ export default function ServiceArea() {
             </ul>
           </div>
 
-          <div className="ticket-edge relative overflow-hidden border border-paper/15 bg-ink pt-1">
+          <Reveal delay={120}>
+          <div className="interactive-lift ticket-edge relative overflow-hidden border border-paper/15 bg-ink pt-1">
             <div className="relative h-56 w-full min-[375px]:h-64 sm:h-72 lg:h-[20rem] xl:h-[24rem]">
               <iframe
                 title="Mappa sede — Via del Lavoro, Pian di Rose, Fossombrone"
@@ -65,6 +67,7 @@ export default function ServiceArea() {
               </span>
             </a>
           </div>
+          </Reveal>
         </div>
       </div>
     </section>
