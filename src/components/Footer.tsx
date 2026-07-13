@@ -1,3 +1,5 @@
+import { COMPANY_ADDRESS_SHORT } from '../data/company'
+
 const footerLinks = [
   { label: 'Servizi', href: '#servizi' },
   { label: 'Materiali', href: '#materiali' },
@@ -15,7 +17,7 @@ export default function Footer() {
               ECO SERVIZI JMC SRLS
             </p>
             <p className="mt-1 font-mono text-xs text-paper/50">
-              Fossombrone (PU) · P.IVA da inserire
+              {COMPANY_ADDRESS_SHORT} · P.IVA da inserire
             </p>
           </div>
 

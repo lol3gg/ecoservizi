@@ -1,3 +1,5 @@
+import { COMPANY_MAPS_EMBED } from '../data/company'
+
 const comuni = ['Fossombrone', 'Fano', 'Pesaro', 'Urbino', 'Urbania', 'Cagli', 'Fermignano', 'Mondavio']
 
 export default function ServiceArea() {
@@ -11,9 +13,9 @@ export default function ServiceArea() {
               Dove interveniamo
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-steel sm:text-base lg:mt-5 lg:text-lg lg:leading-relaxed">
-              Con sede a Fossombrone operiamo su tutta la provincia di
-              Pesaro e Urbino. Per cantieri e ritiri di grandi quantità
-              valutiamo anche interventi fuori zona: chiedici disponibilità.
+              Con sede in Via del Lavoro, Pian di Rose (Fossombrone) operiamo su
+              tutta la provincia di Pesaro e Urbino. Per cantieri e ritiri di
+              grandi quantità valutiamo anche interventi fuori zona: chiedici disponibilità.
             </p>
             <ul className="mt-6 flex flex-wrap justify-center gap-2 lg:mt-8 lg:justify-start lg:gap-3">
               {comuni.map((comune) => (
@@ -32,8 +34,8 @@ export default function ServiceArea() {
 
           <div className="h-56 w-full overflow-hidden border border-paper/10 min-[375px]:h-64 sm:h-72 lg:h-[22rem] lg:min-h-0 xl:h-[26rem]">
             <iframe
-              title="Mappa zona servita — Fossombrone"
-              src="https://maps.google.com/maps?q=Fossombrone%20PU&t=&z=11&ie=UTF8&iwloc=&output=embed"
+              title="Mappa sede — Via del Lavoro, Pian di Rose, Fossombrone"
+              src={COMPANY_MAPS_EMBED}
               className="h-full w-full opacity-80 invert hue-rotate-180"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react'
+import { COMPANY_ADDRESS_FULL, COMPANY_ADDRESS_SHORT, COMPANY_MAPS_QUERY } from '../data/company'
 import Logo from './Logo'
 
 export default function Contact() {
@@ -24,7 +25,7 @@ export default function Contact() {
                 Contattaci oggi stesso
               </h2>
               <p className="mt-3 text-sm text-paper/70 sm:text-base lg:mt-4 lg:text-lg">
-                ECO SERVIZI JMC · Fossombrone (PU), Italia
+                {COMPANY_ADDRESS_FULL}
               </p>
             </div>
 
@@ -46,6 +47,19 @@ export default function Contact() {
             </div>
 
             <dl className="ticket-edge-dark grid grid-cols-1 gap-4 pt-6 sm:grid-cols-2 lg:gap-6">
+              <div className="sm:col-span-2">
+                <dt className="font-mono text-[11px] uppercase tracking-widest text-brand-green">Sede</dt>
+                <dd className="mt-1 text-sm text-paper sm:text-base lg:text-lg">
+                  <a
+                    href={`https://maps.google.com/maps?q=${encodeURIComponent(COMPANY_MAPS_QUERY)}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="transition-colors hover:text-brand-green"
+                  >
+                    {COMPANY_ADDRESS_SHORT}
+                  </a>
+                </dd>
+              </div>
               <div>
                 <dt className="font-mono text-[11px] uppercase tracking-widest text-brand-green">Orari</dt>
                 <dd className="mt-1 text-sm text-paper sm:text-base lg:text-lg">

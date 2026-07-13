@@ -28,7 +28,7 @@ export default function Hero() {
             <div className="max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl">
               <span className="block font-mono text-[10px] uppercase leading-snug tracking-[0.15em] text-brand-green min-[375px]:text-xs sm:tracking-[0.2em]">
                 Ritiro rifiuti ferrosi e metallici
-                <span className="hidden min-[375px]:inline"> · Fossombrone (PU)</span>
+                <span className="hidden min-[375px]:inline"> · Pian di Rose, Fossombrone (PU)</span>
               </span>
               <h1 className="mt-3 font-display text-[2rem] font-bold uppercase leading-[0.95] tracking-tight text-paper min-[375px]:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem]">
                 Il ferro che scartate,

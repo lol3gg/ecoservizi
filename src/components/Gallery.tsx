@@ -42,7 +42,7 @@ export default function Gallery() {
           label="Dal nostro deposito"
           labelClassName="text-brand-green"
           title="Le nostre attività sul campo"
-          description="Ritiri, stoccaggio e gestione dei materiali nel nostro deposito a Fossombrone. Ecco alcune immagini delle operazioni quotidiane."
+          description="Ritiri, stoccaggio e gestione dei materiali nel nostro deposito in Via del Lavoro, Pian di Rose (Fossombrone). Ecco alcune immagini delle operazioni quotidiane."
         />
 
         <div className="mt-10 grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 lg:mt-14 lg:grid-cols-4 lg:gap-4 xl:gap-5">
