@@ -1,4 +1,4 @@
-import { COMPANY_MAPS_EMBED } from '../data/company'
+import { COMPANY_ADDRESS_SHORT, COMPANY_MAPS_EMBED, COMPANY_MAPS_URL } from '../data/company'
 
 const comuni = ['Fossombrone', 'Fano', 'Pesaro', 'Urbino', 'Urbania', 'Cagli', 'Fermignano', 'Mondavio']
 
@@ -32,14 +32,38 @@ export default function ServiceArea() {
             </ul>
           </div>
 
-          <div className="h-56 w-full overflow-hidden border border-paper/10 min-[375px]:h-64 sm:h-72 lg:h-[22rem] lg:min-h-0 xl:h-[26rem]">
-            <iframe
-              title="Mappa sede — Via del Lavoro, Pian di Rose, Fossombrone"
-              src={COMPANY_MAPS_EMBED}
-              className="h-full w-full opacity-80 invert hue-rotate-180"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
+          <div className="ticket-edge relative overflow-hidden border border-paper/15 bg-ink pt-1">
+            <div className="relative h-56 w-full min-[375px]:h-64 sm:h-72 lg:h-[20rem] xl:h-[24rem]">
+              <iframe
+                title="Mappa sede — Via del Lavoro, Pian di Rose, Fossombrone"
+                src={COMPANY_MAPS_EMBED}
+                className="h-full w-full"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+              <div
+                className="pointer-events-none absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-ink-soft/80 to-transparent"
+                aria-hidden="true"
+              />
+            </div>
+
+            <a
+              href={COMPANY_MAPS_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center justify-between gap-3 border-t border-paper/10 bg-ink px-4 py-3.5 transition-colors hover:bg-ink-soft sm:px-5 sm:py-4"
+            >
+              <div className="min-w-0 text-left">
+                <p className="font-mono text-[10px] uppercase tracking-widest text-brand-green sm:text-xs">
+                  La nostra sede
+                </p>
+                <p className="mt-0.5 truncate text-sm text-paper sm:text-base">{COMPANY_ADDRESS_SHORT}</p>
+              </div>
+              <span className="shrink-0 font-mono text-[10px] uppercase tracking-widest text-steel sm:text-xs">
+                Apri mappa →
+              </span>
+            </a>
           </div>
         </div>
       </div>

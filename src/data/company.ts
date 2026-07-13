@@ -14,4 +14,6 @@ export const COMPANY_ADDRESS_FULL =
 
 export const COMPANY_MAPS_QUERY = 'Via del Lavoro, Pian di Rose, Fossombrone PU'
 
-export const COMPANY_MAPS_EMBED = `https://maps.google.com/maps?q=${encodeURIComponent(COMPANY_MAPS_QUERY)}&z=14&ie=UTF8&iwloc=&output=embed`
+export const COMPANY_MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(COMPANY_MAPS_QUERY)}`
+
+export const COMPANY_MAPS_EMBED = `https://maps.google.com/maps?q=${encodeURIComponent(COMPANY_MAPS_QUERY)}&z=15&ie=UTF8&iwloc=&output=embed`
