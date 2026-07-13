@@ -6,12 +6,13 @@
 
   --color-ink: #1c1c1a;
   --color-ink-soft: #29281f;
+  --color-ink-elevated: #35342f;
   --color-paper: #f6f4ee;
   --color-paper-dim: #eeebe1;
-  --color-steel: #62615a;
-  --color-line: #d9d5c6;
+  --color-steel: #9c9890;
+  --color-line: #3d3b35;
 
-  --color-rust: #b0552c;
+  --color-rust: #c4683a;
   --color-rust-dark: #8c4322;
 
   --color-brand-black: #1c1c1a;
@@ -29,12 +30,13 @@ html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  color-scheme: dark;
 }
 
 body {
   font-family: var(--font-inter);
-  color: var(--color-ink);
-  background-color: var(--color-paper);
+  color: var(--color-paper);
+  background-color: var(--color-ink);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -42,6 +44,11 @@ body {
 
 section[id] {
   scroll-margin-top: 4.5rem;
+}
+
+::selection {
+  background-color: rgb(111 207 23 / 0.35);
+  color: var(--color-paper);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -60,8 +67,8 @@ section[id] {
 .ticket-edge {
   background-image: repeating-linear-gradient(
     to right,
-    var(--color-line) 0,
-    var(--color-line) 6px,
+    rgba(246, 244, 238, 0.2) 0,
+    rgba(246, 244, 238, 0.2) 6px,
     transparent 6px,
     transparent 14px
   );

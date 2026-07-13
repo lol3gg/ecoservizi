@@ -43,12 +43,12 @@ const services: Service[] = [
 
 export default function Services() {
   return (
-    <section id="servizi" className="bg-paper py-12 sm:py-16 md:py-20">
+    <section id="servizi" className="bg-ink py-12 sm:py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <span className="font-mono text-xs uppercase tracking-widest text-rust">
           Cosa facciamo
         </span>
-        <h2 className="mt-2 font-display text-2xl font-bold uppercase tracking-tight text-ink min-[375px]:text-3xl sm:text-4xl">
+        <h2 className="mt-2 font-display text-2xl font-bold uppercase tracking-tight text-paper min-[375px]:text-3xl sm:text-4xl">
           Quattro servizi, un solo referente
         </h2>
         <p className="mt-4 max-w-2xl text-sm leading-relaxed text-steel sm:text-base">
@@ -61,9 +61,9 @@ export default function Services() {
           {services.map((service) => (
             <article
               key={service.code}
-              className="ticket-edge flex flex-col overflow-hidden border border-line bg-white pt-1"
+              className="ticket-edge flex flex-col overflow-hidden border border-paper/10 bg-ink-soft pt-1"
             >
-              <div className="aspect-[16/9] w-full overflow-hidden bg-paper-dim">
+              <div className="aspect-[16/9] w-full overflow-hidden bg-ink-elevated">
                 <img
                   src={service.image}
                   alt={service.alt}
@@ -76,7 +76,7 @@ export default function Services() {
                 <span className="font-mono text-[11px] uppercase tracking-widest text-rust">
                   {service.code}
                 </span>
-                <h3 className="mt-1 font-display text-lg font-bold uppercase leading-tight tracking-tight text-ink min-[375px]:text-xl sm:text-2xl">
+                <h3 className="mt-1 font-display text-lg font-bold uppercase leading-tight tracking-tight text-paper min-[375px]:text-xl sm:text-2xl">
                   {service.title}
                 </h3>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-steel sm:text-base">
@@ -84,7 +84,7 @@ export default function Services() {
                 </p>
                 <a
                   href="#contatti"
-                  className="mt-5 inline-block w-fit border-b-2 border-brand-green text-sm font-semibold uppercase tracking-wide text-ink transition-colors hover:border-rust hover:text-rust"
+                  className="mt-5 inline-block w-fit border-b-2 border-brand-green text-sm font-semibold uppercase tracking-wide text-paper transition-colors hover:border-rust hover:text-rust"
                 >
                   Scopri di più →
                 </a>

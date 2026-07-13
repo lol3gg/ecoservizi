@@ -16,7 +16,7 @@ export default function Contact() {
   return (
     <section id="contatti" className="w-full">
       <div className="grid grid-cols-1 md:grid-cols-2">
-        <div className="flex flex-col justify-between gap-8 bg-ink px-4 py-10 sm:gap-10 sm:px-10 sm:py-16 md:px-12 md:py-20">
+        <div className="flex flex-col justify-between gap-8 bg-ink-soft px-4 py-10 sm:gap-10 sm:px-10 sm:py-16 md:px-12 md:py-20">
           <div>
             <Logo variant="light" size="lg" />
             <h2 className="mt-6 font-display text-2xl font-bold uppercase tracking-tight text-paper min-[375px]:text-3xl sm:mt-8 sm:text-4xl">
@@ -67,9 +67,9 @@ export default function Contact() {
           </dl>
         </div>
 
-        <div className="bg-paper px-4 py-10 sm:px-10 sm:py-16 md:px-12 md:py-20">
+        <div className="bg-ink px-4 py-10 sm:px-10 sm:py-16 md:px-12 md:py-20">
           <span className="font-mono text-xs uppercase tracking-widest text-rust">Richiesta rapida</span>
-          <h3 className="mt-2 font-display text-xl font-bold uppercase tracking-tight text-ink min-[375px]:text-2xl sm:text-3xl">
+          <h3 className="mt-2 font-display text-xl font-bold uppercase tracking-tight text-paper min-[375px]:text-2xl sm:text-3xl">
             Descrivici cosa devi smaltire
           </h3>
           <p className="mt-3 text-sm text-steel sm:text-base">
@@ -89,7 +89,7 @@ export default function Contact() {
                 autoComplete="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="input-mobile mt-2 w-full min-h-[48px] border border-line bg-white px-4 py-3 text-ink outline-none focus:border-brand-green"
+                className="input-mobile mt-2 w-full min-h-[48px] border border-paper/15 bg-ink-elevated px-4 py-3 text-paper outline-none placeholder:text-steel/60 focus:border-brand-green"
                 placeholder="Mario Rossi"
               />
             </div>
@@ -105,7 +105,7 @@ export default function Contact() {
                 autoComplete="tel"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                className="input-mobile mt-2 w-full min-h-[48px] border border-line bg-white px-4 py-3 text-ink outline-none focus:border-brand-green"
+                className="input-mobile mt-2 w-full min-h-[48px] border border-paper/15 bg-ink-elevated px-4 py-3 text-paper outline-none placeholder:text-steel/60 focus:border-brand-green"
                 placeholder="333 123 4567"
               />
             </div>
@@ -119,13 +119,13 @@ export default function Contact() {
                 rows={4}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                className="input-mobile mt-2 w-full resize-none border border-line bg-white px-4 py-3 text-ink outline-none focus:border-brand-green"
+                className="input-mobile mt-2 w-full resize-none border border-paper/15 bg-ink-elevated px-4 py-3 text-paper outline-none placeholder:text-steel/60 focus:border-brand-green"
                 placeholder="Es. rottami di ferro da cantiere, circa 2 tonnellate, a Fossombrone"
               />
             </div>
             <button
               type="submit"
-              className="tap-target w-full bg-ink px-6 py-3.5 text-sm font-semibold uppercase tracking-wide text-paper transition-colors hover:bg-brand-green hover:text-ink sm:w-fit"
+              className="tap-target w-full bg-brand-green px-6 py-3.5 text-sm font-semibold uppercase tracking-wide text-ink transition-opacity hover:opacity-90 sm:w-fit"
             >
               Invia richiesta
             </button>

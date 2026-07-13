@@ -12,7 +12,7 @@ const materials = [
 
 export default function Materials() {
   return (
-    <section id="materiali" className="bg-ink py-12 sm:py-16 md:py-20">
+    <section id="materiali" className="bg-ink-soft py-12 sm:py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div className="max-w-md">
@@ -39,7 +39,7 @@ export default function Materials() {
             {materials.map((material) => (
               <li
                 key={material}
-                className="flex items-center gap-3 border border-paper/15 px-4 py-3 text-sm text-paper sm:text-base"
+                className="flex items-center gap-3 border border-paper/15 bg-ink/50 px-4 py-3 text-sm text-paper sm:text-base"
               >
                 <span className="h-1.5 w-1.5 shrink-0 bg-brand-green" aria-hidden="true" />
                 {material}

@@ -33,7 +33,7 @@ export default function Gallery() {
   }, [open, activeIndex])
 
   return (
-    <section id="galleria" className="bg-ink py-12 sm:py-16 md:py-20">
+    <section id="galleria" className="bg-ink-soft py-12 sm:py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <span className="font-mono text-xs uppercase tracking-widest text-brand-green">
           Dal nostro deposito

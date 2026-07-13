@@ -18,12 +18,12 @@ const points = [
 
 export default function Trust() {
   return (
-    <section className="border-y border-line bg-paper py-14 sm:py-16">
+    <section className="border-y border-paper/10 bg-ink py-14 sm:py-16">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <span className="font-mono text-xs uppercase tracking-widest text-rust">Conformità</span>
-            <h2 className="mt-2 font-display text-2xl font-bold uppercase tracking-tight text-ink sm:text-3xl">
+            <h2 className="mt-2 font-display text-2xl font-bold uppercase tracking-tight text-paper sm:text-3xl">
               Lavoriamo in regola, ogni volta
             </h2>
           </div>
@@ -35,7 +35,7 @@ export default function Trust() {
         <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
           {points.map((point) => (
             <div key={point.title} className="border-t-2 border-brand-green pt-4">
-              <h3 className="font-display text-lg font-bold uppercase tracking-tight text-ink">
+              <h3 className="font-display text-lg font-bold uppercase tracking-tight text-paper">
                 {point.title}
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-steel">{point.description}</p>
