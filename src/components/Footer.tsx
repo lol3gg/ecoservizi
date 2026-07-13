@@ -17,7 +17,7 @@ export default function Footer() {
               ECO SERVIZI JMC SRLS
             </p>
             <p className="mt-1 font-mono text-xs text-paper/50">
-              {COMPANY_ADDRESS_SHORT} · P.IVA da inserire
+              {COMPANY_ADDRESS_SHORT}
             </p>
           </div>
 
