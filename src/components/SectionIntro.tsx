@@ -21,11 +21,11 @@ export default function SectionIntro({
   return (
     <div className={`${widthClass} ${alignClass}`}>
       <span className={`font-mono text-xs uppercase tracking-widest ${labelClassName}`}>{label}</span>
-      <h2 className="mt-2 font-display text-2xl font-bold uppercase tracking-tight text-paper min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] lg:leading-none">
+      <h2 className="mt-2 font-display text-2xl font-bold uppercase tracking-tight text-paper min-[375px]:text-3xl sm:text-3xl lg:text-4xl lg:leading-none">
         {title}
       </h2>
       {description && (
-        <p className="mt-4 text-sm leading-relaxed text-steel sm:text-base lg:mt-5 lg:text-lg lg:leading-relaxed">
+        <p className="mt-4 text-sm leading-relaxed text-steel sm:text-base lg:mt-4 lg:text-base lg:leading-relaxed">
           {description}
         </p>
       )}

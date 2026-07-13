@@ -16,7 +16,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-ink pb-[calc(5rem+env(safe-area-inset-bottom))] sm:pb-0">
       <Header />
-      <main className="pt-[4.5rem] lg:pt-[5.5rem]">
+      <main className="pt-[4.25rem] lg:pt-[5rem]">
         <Hero />
         <About />
         <Services />

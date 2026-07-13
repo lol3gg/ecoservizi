@@ -10,7 +10,7 @@ export default function About() {
               <span className="font-mono text-xs uppercase tracking-widest text-brand-green">
                 La nostra storia
               </span>
-              <p className="mt-2 font-display text-5xl font-bold leading-none text-brand-green sm:text-6xl lg:text-7xl">
+              <p className="mt-2 font-display text-4xl font-bold leading-none text-brand-green sm:text-5xl lg:text-6xl">
                 2007
               </p>
               <p className="mt-2 font-mono text-[10px] uppercase tracking-widest text-steel sm:text-xs">
@@ -18,7 +18,7 @@ export default function About() {
               </p>
             </div>
 
-            <h2 className="mt-8 font-display text-3xl font-bold uppercase tracking-tight text-paper min-[375px]:text-4xl sm:mt-10 sm:text-5xl lg:text-[3.25rem] lg:leading-none">
+            <h2 className="mt-8 font-display text-2xl font-bold uppercase tracking-tight text-paper min-[375px]:text-3xl sm:mt-10 sm:text-4xl lg:text-4xl lg:leading-none">
               Chi siamo?
             </h2>
 

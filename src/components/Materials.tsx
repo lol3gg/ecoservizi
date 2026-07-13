@@ -55,7 +55,7 @@ export default function Materials() {
               <span className="font-mono text-xs uppercase tracking-widest text-brand-green">
                 Materiali trattati
               </span>
-              <h2 className="mt-2 font-display text-2xl font-bold uppercase tracking-tight text-paper min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] lg:leading-none">
+              <h2 className="mt-2 font-display text-2xl font-bold uppercase tracking-tight text-paper min-[375px]:text-3xl sm:text-4xl lg:text-4xl lg:leading-none">
                 Cosa ritiriamo
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-paper/70 sm:text-base lg:mt-5 lg:text-lg lg:leading-relaxed">

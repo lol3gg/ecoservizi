@@ -10,7 +10,7 @@ export default function ServiceArea() {
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16 xl:gap-20">
           <div className="max-w-xl text-center lg:max-w-none lg:text-left">
             <span className="font-mono text-xs uppercase tracking-widest text-rust">Zona operativa</span>
-            <h2 className="mt-2 font-display text-2xl font-bold uppercase tracking-tight text-paper min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] lg:leading-none">
+            <h2 className="mt-2 font-display text-2xl font-bold uppercase tracking-tight text-paper min-[375px]:text-3xl sm:text-4xl lg:text-4xl lg:leading-none">
               Dove interveniamo
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-steel sm:text-base lg:mt-5 lg:text-lg lg:leading-relaxed">

@@ -14,7 +14,7 @@ export default function Hero() {
         <img
           src={asset('images/hero-industrial.png')}
           alt="Capannone industriale con rifiuti ferrosi e metalli pronti al ritiro"
-          className="h-[min(400px,72svh)] w-full object-cover object-[center_70%] sm:h-[480px] sm:object-center md:h-[560px] lg:h-[620px] xl:h-[680px]"
+          className="h-[min(380px,70svh)] w-full object-cover object-[center_70%] sm:h-[440px] sm:object-center md:h-[500px] lg:h-[540px] xl:h-[580px]"
           loading="eager"
           fetchPriority="high"
         />
@@ -29,12 +29,12 @@ export default function Hero() {
               <span className="hero-enter hero-enter-1 block font-mono text-[10px] uppercase leading-snug tracking-[0.15em] text-brand-green min-[375px]:text-xs sm:tracking-[0.2em]">
                 Commercio metalli ferrosi e non — Marche (PU)
               </span>
-              <h1 className="hero-enter hero-enter-2 mt-3 font-display text-[2rem] font-bold uppercase leading-[0.95] tracking-tight text-paper min-[375px]:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem]">
+              <h1 className="hero-enter hero-enter-2 mt-3 font-display text-[1.875rem] font-bold uppercase leading-[0.95] tracking-tight text-paper min-[375px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4.5rem]">
                 Il ferro che scartate,
                 <br />
                 lo gestiamo noi.
               </h1>
-              <p className="hero-enter hero-enter-3 mt-4 max-w-lg text-sm leading-relaxed text-paper/80 sm:mt-5 sm:text-base md:text-lg lg:max-w-xl lg:text-xl lg:leading-relaxed">
+              <p className="hero-enter hero-enter-3 mt-4 max-w-lg text-sm leading-relaxed text-paper/80 sm:mt-5 sm:text-base lg:max-w-xl lg:text-lg lg:leading-relaxed">
                 Raccolta, trasporto e valutazione di rifiuti ferrosi e metallici per
                 aziende, artigiani e privati. Ritiro rapido, mezzi autorizzati e
                 documentazione ambientale in regola a ogni conferimento.

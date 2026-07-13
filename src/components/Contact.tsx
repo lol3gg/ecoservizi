@@ -23,7 +23,7 @@ export default function Contact() {
           <div className="flex flex-col justify-between gap-8 bg-ink-soft px-5 py-10 sm:gap-10 sm:px-10 sm:py-14 lg:px-12 lg:py-16 xl:px-16 xl:py-20">
             <div className="text-center lg:text-left">
               <Logo variant="light" size="lg" className="mx-auto object-center lg:mx-0 lg:object-left" />
-              <h2 className="mt-6 font-display text-2xl font-bold uppercase tracking-tight text-paper min-[375px]:text-3xl sm:mt-8 sm:text-4xl lg:text-[2.75rem] lg:leading-none">
+              <h2 className="mt-6 font-display text-2xl font-bold uppercase tracking-tight text-paper min-[375px]:text-3xl sm:mt-8 sm:text-4xl lg:text-4xl lg:leading-none">
                 Contattaci oggi stesso
               </h2>
               <p className="mt-3 text-sm text-paper/70 sm:text-base lg:mt-4 lg:text-lg">
