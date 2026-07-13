@@ -59,36 +59,37 @@ export default function Services() {
           />
         </Reveal>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:mt-16 lg:gap-8 xl:gap-10">
-          {services.map((service, index) => (
-            <Reveal key={service.code} delay={index * 80}>
-            <article
-              className="interactive-lift group ticket-edge flex h-full flex-col overflow-hidden border border-paper/10 bg-ink-soft pt-1 transition-colors hover:border-paper/20"
-            >
-              <div className="aspect-[16/9] w-full overflow-hidden bg-ink-elevated">
-                <img
-                  src={service.image}
-                  alt={service.alt}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <div className="flex flex-1 flex-col p-5 sm:p-6 lg:p-8">
-                <span className="font-mono text-[11px] uppercase tracking-widest text-rust">
-                  {service.code}
-                </span>
-                <h3 className="mt-1 font-display text-lg font-bold uppercase leading-tight tracking-tight text-paper min-[375px]:text-xl sm:text-2xl">
-                  {service.title}
-                </h3>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-steel sm:text-base lg:leading-7">
-                  {service.description}
-                </p>
-              </div>
-            </article>
-            </Reveal>
-          ))}
-        </div>
+        <Reveal delay={80}>
+          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:mt-16 lg:gap-8 xl:gap-10">
+            {services.map((service) => (
+              <article
+                key={service.code}
+                className="interactive-lift group ticket-edge flex h-full flex-col overflow-hidden border border-paper/10 bg-ink-soft pt-1 transition-colors hover:border-paper/20"
+              >
+                <div className="aspect-[16/9] w-full overflow-hidden bg-ink-elevated">
+                  <img
+                    src={service.image}
+                    alt={service.alt}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col p-5 sm:p-6 lg:p-8">
+                  <span className="font-mono text-[11px] uppercase tracking-widest text-rust">
+                    {service.code}
+                  </span>
+                  <h3 className="mt-1 font-display text-lg font-bold uppercase leading-tight tracking-tight text-paper min-[375px]:text-xl sm:text-2xl">
+                    {service.title}
+                  </h3>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-steel sm:text-base lg:leading-7">
+                    {service.description}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </Reveal>
       </div>
     </section>
   )

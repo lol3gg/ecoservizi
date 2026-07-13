@@ -6,6 +6,10 @@ type RevealProps = {
   delay?: number
 }
 
+function prefersReducedMotion() {
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches
+}
+
 export default function Reveal({ children, className = '', delay = 0 }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null)
   const [visible, setVisible] = useState(false)
@@ -14,25 +18,38 @@ export default function Reveal({ children, className = '', delay = 0 }: RevealPr
     const el = ref.current
     if (!el) return
 
+    const show = () => setVisible(true)
+
+    if (prefersReducedMotion()) {
+      show()
+      return
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setVisible(true)
+          show()
           observer.disconnect()
         }
       },
-      { threshold: 0.1, rootMargin: '0px 0px -6% 0px' },
+      { threshold: 0, rootMargin: '100px 0px 100px 0px' },
     )
 
     observer.observe(el)
-    return () => observer.disconnect()
+
+    const fallback = window.setTimeout(show, 1500)
+
+    return () => {
+      observer.disconnect()
+      window.clearTimeout(fallback)
+    }
   }, [])
 
   return (
     <div
       ref={ref}
       className={`reveal ${visible ? 'reveal-visible' : ''} ${className}`}
-      style={{ transitionDelay: `${delay}ms` }}
+      style={{ transitionDelay: visible ? `${delay}ms` : '0ms' }}
     >
       {children}
     </div>

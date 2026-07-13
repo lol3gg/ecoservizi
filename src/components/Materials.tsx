@@ -51,60 +51,58 @@ export default function Materials() {
       <div className="container-page">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,22rem)_1fr] lg:gap-16 xl:grid-cols-[minmax(0,26rem)_1fr] xl:gap-20">
           <Reveal>
-          <div className="text-center lg:sticky lg:top-28 lg:text-left">
-            <span className="font-mono text-xs uppercase tracking-widest text-brand-green">
-              Materiali trattati
-            </span>
-            <h2 className="mt-2 font-display text-2xl font-bold uppercase tracking-tight text-paper min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] lg:leading-none">
-              Cosa ritiriamo
-            </h2>
-            <p className="mt-4 text-sm leading-relaxed text-paper/70 sm:text-base lg:mt-5 lg:text-lg lg:leading-relaxed">
-              Trattiamo le principali categorie di metalli ferrosi e non
-              ferrosi. Non sei sicuro se un materiale rientra tra quelli
-              ritirati? Scrivici o chiamaci: valutiamo gratuitamente.
-            </p>
-            <a
-              href="#contatti"
-              className="btn-mobile-full tap-target mt-6 inline-block bg-brand-green px-6 py-3.5 text-sm font-semibold uppercase tracking-wide text-ink transition-opacity hover:opacity-90 lg:mt-8 lg:px-8"
-            >
-              Chiedi una valutazione
-            </a>
-          </div>
-          </Reveal>
-
-          <Reveal delay={100}>
-          <ul className="grid grid-cols-2 gap-2 lg:hidden">
-            {preview.map((material) => (
-              <MaterialItem key={material} material={material} />
-            ))}
-            <li>
-              <button
-                type="button"
-                onClick={() => setShowAll(true)}
-                className="tap-target flex h-full min-h-[3.25rem] w-full flex-col items-center justify-center gap-1 border border-dashed border-paper/25 bg-ink/30 px-3 py-3 text-center transition-colors hover:border-brand-green hover:bg-ink/50"
+            <div className="text-center lg:sticky lg:top-28 lg:text-left">
+              <span className="font-mono text-xs uppercase tracking-widest text-brand-green">
+                Materiali trattati
+              </span>
+              <h2 className="mt-2 font-display text-2xl font-bold uppercase tracking-tight text-paper min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] lg:leading-none">
+                Cosa ritiriamo
+              </h2>
+              <p className="mt-4 text-sm leading-relaxed text-paper/70 sm:text-base lg:mt-5 lg:text-lg lg:leading-relaxed">
+                Trattiamo le principali categorie di metalli ferrosi e non
+                ferrosi. Non sei sicuro se un materiale rientra tra quelli
+                ritirati? Scrivici o chiamaci: valutiamo gratuitamente.
+              </p>
+              <a
+                href="#contatti"
+                className="btn-mobile-full tap-target mt-6 inline-block bg-brand-green px-6 py-3.5 text-sm font-semibold uppercase tracking-wide text-ink transition-opacity hover:opacity-90 lg:mt-8 lg:px-8"
               >
-                <span className="font-display text-lg font-bold text-brand-green">Altro</span>
-                <span className="font-mono text-[10px] uppercase tracking-widest text-steel">
-                  +{hiddenCount} materiali
-                </span>
-              </button>
-            </li>
-          </ul>
+                Chiedi una valutazione
+              </a>
+            </div>
           </Reveal>
 
-          <Reveal delay={100}>
-          <ul className="hidden grid-cols-3 gap-3 lg:grid">
-            {materials.map((material) => (
-              <MaterialItem key={material} material={material} />
-            ))}
-          </ul>
+          <Reveal delay={80}>
+            <ul className="grid grid-cols-2 gap-2 lg:hidden">
+              {preview.map((material) => (
+                <MaterialItem key={material} material={material} />
+              ))}
+              <li>
+                <button
+                  type="button"
+                  onClick={() => setShowAll(true)}
+                  className="tap-target flex h-full min-h-[3.25rem] w-full flex-col items-center justify-center gap-1 border border-dashed border-paper/25 bg-ink/30 px-3 py-3 text-center transition-colors hover:border-brand-green hover:bg-ink/50"
+                >
+                  <span className="font-display text-lg font-bold text-brand-green">Altro</span>
+                  <span className="font-mono text-[10px] uppercase tracking-widest text-steel">
+                    +{hiddenCount} materiali
+                  </span>
+                </button>
+              </li>
+            </ul>
+
+            <ul className="hidden grid-cols-3 gap-3 lg:grid">
+              {materials.map((material) => (
+                <MaterialItem key={material} material={material} />
+              ))}
+            </ul>
           </Reveal>
         </div>
       </div>
 
       {showAll && (
         <div
-          className="fixed inset-0 z-[100] flex flex-col bg-ink/95 backdrop-blur-sm animate-[fade-in_0.3s_ease-out] lg:hidden"
+          className="fixed inset-0 z-[100] flex flex-col bg-ink/95 backdrop-blur-sm lg:hidden"
           role="dialog"
           aria-modal="true"
           aria-label="Elenco completo materiali ritirati"
