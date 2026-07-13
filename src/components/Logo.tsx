@@ -1,3 +1,5 @@
+import { asset } from '../lib/asset'
+
 type LogoProps = {
   variant?: 'default' | 'light'
   size?: 'sm' | 'lg'
@@ -10,7 +12,7 @@ export default function Logo({ variant = 'default', size = 'sm', className = '' 
     ? 'h-24 w-auto min-[375px]:h-28 sm:h-32 md:h-36'
     : 'h-9 w-auto min-[375px]:h-10 sm:h-11 md:h-12'
 
-  const src = variant === 'light' ? '/images/logo-light.png' : '/images/logo.png'
+  const src = variant === 'light' ? asset('images/logo-light.png') : asset('images/logo.png')
 
   return (
     <img

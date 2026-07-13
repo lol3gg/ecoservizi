@@ -1,3 +1,5 @@
+import { asset } from '../lib/asset'
+
 const manifestFacts = [
   { label: 'Zona servita', value: 'Fossombrone e provincia PU' },
   { label: 'Orari', value: 'Lun–Ven 8–18 · Sab 8–12' },
@@ -10,7 +12,7 @@ export default function Hero() {
     <section id="home" className="bg-ink">
       <div className="relative w-full">
         <img
-          src="/images/hero-industrial.png"
+          src={asset('images/hero-industrial.png')}
           alt="Capannone industriale con rifiuti ferrosi e metalli pronti al ritiro"
           className="h-[min(520px,88svh)] w-full object-cover object-center sm:h-[480px] md:h-[560px] lg:h-[620px]"
           loading="eager"

@@ -1,3 +1,5 @@
+import { asset } from '../lib/asset'
+
 type Service = {
   code: string
   title: string
@@ -9,7 +11,7 @@ type Service = {
 const services: Service[] = [
   {
     code: 'SERV-01',
-    image: '/images/service-transport.png',
+    image: asset('images/service-transport.png'),
     alt: 'Automezzo autorizzato durante il carico di rifiuti ferrosi in cantiere',
     title: 'Gestione e trasporto rifiuti ferrosi',
     description:
@@ -17,7 +19,7 @@ const services: Service[] = [
   },
   {
     code: 'SERV-02',
-    image: '/images/service-documentation.png',
+    image: asset('images/service-documentation.png'),
     alt: 'Formulari FIR e documentazione ambientale per la tracciabilità dei rifiuti',
     title: 'Supporto documentale ambientale',
     description:
@@ -25,7 +27,7 @@ const services: Service[] = [
   },
   {
     code: 'SERV-03',
-    image: '/images/service-copper.png',
+    image: asset('images/service-copper.png'),
     alt: 'Tubi in rame e raccordi metallici pronti per la valutazione',
     title: 'Valutazioni e ritiro metalli',
     description:
@@ -33,7 +35,7 @@ const services: Service[] = [
   },
   {
     code: 'SERV-04',
-    image: '/images/service-scrap-metal.png',
+    image: asset('images/service-scrap-metal.png'),
     alt: 'Scarti e rottami metallici pronti per il riciclo',
     title: 'Servizi rapidi e sostenibili',
     description:
