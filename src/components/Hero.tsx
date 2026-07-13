@@ -14,7 +14,7 @@ export default function Hero() {
         <img
           src={asset('images/hero-industrial.png')}
           alt="Capannone industriale con rifiuti ferrosi e metalli pronti al ritiro"
-          className="h-[min(520px,88svh)] w-full object-cover object-center sm:h-[480px] md:h-[560px] lg:h-[620px] xl:h-[680px]"
+          className="h-[min(400px,72svh)] w-full object-cover object-[center_70%] sm:h-[480px] sm:object-center md:h-[560px] lg:h-[620px] xl:h-[680px]"
           loading="eager"
           fetchPriority="high"
         />
@@ -23,7 +23,7 @@ export default function Hero() {
           aria-hidden="true"
         />
 
-        <div className="absolute inset-0 flex items-end pb-8 sm:items-center sm:pb-0">
+        <div className="absolute inset-0 flex items-end pb-6 sm:items-center sm:pb-0">
           <div className="container-page w-full">
             <div className="max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl">
               <span className="block font-mono text-[10px] uppercase leading-snug tracking-[0.15em] text-brand-green min-[375px]:text-xs sm:tracking-[0.2em]">

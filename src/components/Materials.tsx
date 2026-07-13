@@ -15,7 +15,7 @@ export default function Materials() {
     <section id="materiali" className="section-y bg-ink-soft">
       <div className="container-page">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,22rem)_1fr] lg:gap-16 xl:grid-cols-[minmax(0,26rem)_1fr] xl:gap-20">
-          <div className="lg:sticky lg:top-28">
+          <div className="text-center lg:sticky lg:top-28 lg:text-left">
             <span className="font-mono text-xs uppercase tracking-widest text-brand-green">
               Materiali trattati
             </span>

@@ -24,13 +24,18 @@ export default function Header() {
 
   return (
     <header className="safe-top sticky top-0 z-50 border-b border-paper/10 bg-ink/95 backdrop-blur supports-[backdrop-filter]:bg-ink/90">
-      <div className="container-page flex items-center justify-between gap-4 py-3 lg:py-4">
-        <a href="#home" aria-label="ECO SERVIZI JMC — Home" className="shrink-0" onClick={closeMenu}>
-          <Logo variant="light" />
+      <div className="container-page grid grid-cols-3 items-center py-3 lg:flex lg:justify-between lg:gap-4 lg:py-4">
+        <a
+          href="#home"
+          aria-label="ECO SERVIZI JMC — Home"
+          className="col-start-2 justify-self-center shrink-0 lg:col-auto lg:justify-self-auto"
+          onClick={closeMenu}
+        >
+          <Logo variant="light" size="header" />
         </a>
 
-        <nav aria-label="Navigazione principale" className="hidden lg:block">
-          <ul className="flex items-center gap-5 xl:gap-7">
+        <nav aria-label="Navigazione principale" className="hidden lg:block lg:flex-1 lg:px-6 xl:px-8">
+          <ul className="flex items-center justify-center gap-5 xl:gap-7">
             {navItems.map((item) => (
               <li key={item.href}>
                 <a
@@ -44,16 +49,16 @@ export default function Header() {
           </ul>
         </nav>
 
-        <div className="flex shrink-0 items-center gap-2">
+        <div className="col-start-3 flex shrink-0 items-center justify-self-end gap-2">
           <a
             href="tel:+393276609651"
-            className="tap-target flex items-center gap-2 border-2 border-brand-green bg-brand-green px-3 py-2 text-xs font-semibold uppercase tracking-wide text-ink transition-colors hover:border-paper hover:bg-paper hover:text-ink sm:px-5 sm:text-sm"
+            aria-label="Chiama ora"
+            className="tap-target flex items-center justify-center border-2 border-brand-green bg-brand-green p-2.5 text-ink transition-colors hover:border-paper hover:bg-paper hover:text-ink sm:gap-2 sm:px-5 sm:py-2 sm:text-sm"
           >
-            <svg className="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+            <svg className="h-5 w-5 shrink-0 sm:h-4 sm:w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
             </svg>
-            <span className="hidden min-[375px]:inline">Chiama ora</span>
-            <span className="min-[375px]:hidden">Chiama</span>
+            <span className="hidden text-xs font-semibold uppercase tracking-wide sm:inline sm:text-sm">Chiama ora</span>
           </a>
 
           <button

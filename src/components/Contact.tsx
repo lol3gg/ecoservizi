@@ -18,8 +18,8 @@ export default function Contact() {
       <div className="container-page">
         <div className="overflow-hidden border border-paper/10 lg:grid lg:grid-cols-2">
           <div className="flex flex-col justify-between gap-8 bg-ink-soft px-5 py-10 sm:gap-10 sm:px-10 sm:py-14 lg:px-12 lg:py-16 xl:px-16 xl:py-20">
-            <div>
-              <Logo variant="light" size="lg" />
+            <div className="text-center lg:text-left">
+              <Logo variant="light" size="lg" className="mx-auto object-center lg:mx-0 lg:object-left" />
               <h2 className="mt-6 font-display text-2xl font-bold uppercase tracking-tight text-paper min-[375px]:text-3xl sm:mt-8 sm:text-4xl lg:text-[2.75rem] lg:leading-none">
                 Contattaci oggi stesso
               </h2>

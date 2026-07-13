@@ -5,7 +5,7 @@ export default function ServiceArea() {
     <section id="zona" className="section-y bg-ink-soft">
       <div className="container-page">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16 xl:gap-20">
-          <div className="max-w-xl lg:max-w-none">
+          <div className="max-w-xl text-center lg:max-w-none lg:text-left">
             <span className="font-mono text-xs uppercase tracking-widest text-rust">Zona operativa</span>
             <h2 className="mt-2 font-display text-2xl font-bold uppercase tracking-tight text-paper min-[375px]:text-3xl sm:text-4xl lg:text-[2.75rem] lg:leading-none">
               Dove interveniamo
@@ -15,7 +15,7 @@ export default function ServiceArea() {
               Pesaro e Urbino. Per cantieri e ritiri di grandi quantità
               valutiamo anche interventi fuori zona: chiedici disponibilità.
             </p>
-            <ul className="mt-6 flex flex-wrap gap-2 lg:mt-8 lg:gap-3">
+            <ul className="mt-6 flex flex-wrap justify-center gap-2 lg:mt-8 lg:justify-start lg:gap-3">
               {comuni.map((comune) => (
                 <li
                   key={comune}
