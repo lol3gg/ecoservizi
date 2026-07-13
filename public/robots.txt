@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lol3gg.github.io/ecoservizi/sitemap.xml
