@@ -37,6 +37,7 @@ jobs:
           force_orphan: true
 
       - name: Configura GitHub Pages su gh-pages
+        continue-on-error: true
         run: |
           curl -sf -X PUT \
             -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
