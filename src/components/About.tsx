@@ -13,7 +13,7 @@ export default function About() {
 
           <div className="max-w-3xl text-center lg:text-left">
             <h2 className="font-display text-2xl font-bold uppercase tracking-tight text-paper min-[375px]:text-3xl sm:text-4xl">
-              Chi siamo
+              Chi siamo?
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-paper/75 sm:text-base lg:text-lg lg:leading-relaxed">
               ECO SERVIZI JMC è gestita da due fratelli che dal 2007 si occupano di
