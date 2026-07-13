@@ -51,7 +51,7 @@ export default function Header() {
 
         <div className="col-start-3 flex shrink-0 items-center justify-self-end gap-2">
           <a
-            href="tel:+393276609651"
+            href="tel:+393276039651"
             aria-label="Chiama ora"
             className="tap-target flex items-center justify-center border-2 border-brand-green bg-brand-green p-2.5 text-ink transition-colors hover:border-paper hover:bg-paper hover:text-ink sm:gap-2 sm:px-5 sm:py-2 sm:text-sm"
           >

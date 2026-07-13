@@ -48,7 +48,7 @@ export default function Hero() {
                   Richiedi un ritiro
                 </a>
                 <a
-                  href="https://wa.me/393276609651"
+                  href="https://wa.me/393276039651"
                   target="_blank"
                   rel="noreferrer"
                   className="btn-mobile-full tap-target inline-flex items-center justify-center gap-2 border border-paper/40 px-6 py-3.5 text-sm font-semibold uppercase tracking-wide text-paper transition-colors hover:border-paper hover:bg-paper/10 sm:px-8 sm:py-3.5 sm:text-base lg:px-10"

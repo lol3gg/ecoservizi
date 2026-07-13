@@ -30,13 +30,13 @@ export default function Contact() {
 
             <div className="flex flex-col gap-3 min-[375px]:flex-row min-[375px]:flex-wrap">
               <a
-                href="tel:+393276609651"
+                href="tel:+393276039651"
                 className="btn-mobile-full tap-target inline-flex items-center justify-center gap-2 bg-brand-green px-5 py-3.5 text-sm font-semibold uppercase tracking-wide text-ink transition-opacity hover:opacity-90 lg:px-8"
               >
-                +39 327 660 9651
+                +39 327 603 9651
               </a>
               <a
-                href="https://wa.me/393276609651"
+                href="https://wa.me/393276039651"
                 target="_blank"
                 rel="noreferrer"
                 className="btn-mobile-full tap-target inline-flex items-center justify-center gap-2 border border-paper/40 px-5 py-3.5 text-sm font-semibold uppercase tracking-wide text-paper transition-colors hover:border-paper hover:bg-paper/10 lg:px-8"
