@@ -15,4 +15,4 @@ export const galleryImages: GalleryImage[] = Array.from({ length: 22 }, (_, i) =
   }
 })
 
-export const GALLERY_PREVIEW_COUNT = 2
+export const GALLERY_PREVIEW_COUNT = 7

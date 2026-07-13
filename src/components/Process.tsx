@@ -1,3 +1,5 @@
+import SectionIntro from './SectionIntro'
+
 const steps = [
   {
     number: '01',
@@ -21,27 +23,30 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="come-funziona" className="bg-ink py-12 sm:py-16 md:py-20">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <span className="font-mono text-xs uppercase tracking-widest text-rust">Il processo</span>
-        <h2 className="mt-2 font-display text-2xl font-bold uppercase tracking-tight text-paper min-[375px]:text-3xl sm:text-4xl">
-          Come funziona un ritiro
-        </h2>
+    <section id="come-funziona" className="section-y bg-ink">
+      <div className="container-page">
+        <SectionIntro
+          align="center"
+          label="Il processo"
+          title="Come funziona un ritiro"
+        />
 
-        <div className="mt-8 grid grid-cols-1 gap-8 sm:mt-10 md:grid-cols-3 md:gap-6">
-          {steps.map((step, i) => (
-            <div key={step.number} className="relative border-b border-paper/10 pb-8 last:border-b-0 last:pb-0 md:border-b-0 md:pb-0">
-              <div className="flex flex-col gap-1 min-[375px]:flex-row min-[375px]:items-baseline min-[375px]:gap-3">
-                <span className="font-display text-4xl font-bold text-brand-green min-[375px]:text-5xl">{step.number}</span>
-                <h3 className="font-display text-lg font-bold uppercase leading-tight tracking-tight text-paper min-[375px]:text-xl sm:text-2xl">
-                  {step.title}
-                </h3>
-              </div>
-              <p className="mt-3 text-sm leading-relaxed text-steel sm:text-base">{step.description}</p>
-              {i < steps.length - 1 && (
-                <div className="mt-6 hidden h-px w-full bg-paper/10 md:block" aria-hidden="true" />
-              )}
-            </div>
+        <div className="mt-12 grid grid-cols-1 gap-6 lg:mt-16 lg:grid-cols-3 lg:gap-8">
+          {steps.map((step) => (
+            <article
+              key={step.number}
+              className="ticket-edge flex flex-col border border-paper/10 bg-ink-soft p-6 pt-5 sm:p-8 sm:pt-6 lg:p-8 lg:pt-7"
+            >
+              <span className="font-display text-4xl font-bold text-brand-green min-[375px]:text-5xl lg:text-6xl">
+                {step.number}
+              </span>
+              <h3 className="mt-3 font-display text-lg font-bold uppercase leading-tight tracking-tight text-paper min-[375px]:text-xl sm:text-2xl">
+                {step.title}
+              </h3>
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-steel sm:text-base lg:mt-4 lg:leading-7">
+                {step.description}
+              </p>
+            </article>
           ))}
         </div>
       </div>

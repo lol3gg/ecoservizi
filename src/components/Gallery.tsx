@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import { galleryImages, GALLERY_PREVIEW_COUNT } from '../data/gallery'
+import SectionIntro from './SectionIntro'
 
 export default function Gallery() {
   const [open, setOpen] = useState(false)
@@ -33,20 +34,18 @@ export default function Gallery() {
   }, [open, activeIndex])
 
   return (
-    <section id="galleria" className="bg-ink-soft py-12 sm:py-16 md:py-20">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <span className="font-mono text-xs uppercase tracking-widest text-brand-green">
-          Dal nostro deposito
-        </span>
-        <h2 className="mt-2 font-display text-2xl font-bold uppercase tracking-tight text-paper min-[375px]:text-3xl sm:text-4xl">
-          Le nostre attività sul campo
-        </h2>
-        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-paper/70 sm:text-base">
-          Ritiri, stoccaggio e gestione dei materiali nel nostro deposito a
-          Fossombrone. Ecco alcune immagini delle operazioni quotidiane.
-        </p>
+    <section id="galleria" className="section-y bg-ink-soft">
+      <div className="container-page">
+        <SectionIntro
+          align="center"
+          wide
+          label="Dal nostro deposito"
+          labelClassName="text-brand-green"
+          title="Le nostre attività sul campo"
+          description="Ritiri, stoccaggio e gestione dei materiali nel nostro deposito a Fossombrone. Ecco alcune immagini delle operazioni quotidiane."
+        />
 
-        <div className="mt-8 grid grid-cols-3 gap-2 sm:gap-3 md:gap-4">
+        <div className="mt-10 grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 lg:mt-14 lg:grid-cols-4 lg:gap-4 xl:gap-5">
           {preview.map((image) => (
             <button
               key={image.id}
@@ -74,16 +73,16 @@ export default function Gallery() {
             aria-label={`Vedi tutte le ${galleryImages.length} foto`}
             className="ticket-edge relative flex aspect-[4/3] flex-col items-center justify-center border border-paper/20 bg-ink-soft pt-1 transition-colors hover:border-brand-green hover:bg-ink"
           >
-            {galleryImages[2] && (
+            {galleryImages[GALLERY_PREVIEW_COUNT] && (
               <img
-                src={galleryImages[2].src}
+                src={galleryImages[GALLERY_PREVIEW_COUNT].src}
                 alt=""
                 className="absolute inset-0 h-full w-full object-cover opacity-30"
                 loading="lazy"
                 aria-hidden="true"
               />
             )}
-            <span className="relative z-10 font-display text-2xl font-bold text-brand-green min-[375px]:text-3xl sm:text-4xl md:text-5xl">
+            <span className="relative z-10 font-display text-2xl font-bold text-brand-green min-[375px]:text-3xl sm:text-4xl lg:text-5xl">
               +{remaining}
             </span>
             <span className="relative z-10 mt-1 px-1 text-center font-mono text-[9px] uppercase leading-tight tracking-widest text-paper min-[375px]:mt-2 min-[375px]:px-2 min-[375px]:text-[10px] sm:text-xs">
@@ -100,7 +99,7 @@ export default function Gallery() {
           aria-modal="true"
           aria-label="Galleria fotografica deposito"
         >
-          <div className="safe-top safe-x flex shrink-0 items-center justify-between border-b border-paper/10 px-4 py-4 sm:px-6">
+          <div className="safe-top safe-x flex shrink-0 items-center justify-between border-b border-paper/10 px-4 py-4 sm:px-6 lg:mx-auto lg:w-full lg:max-w-7xl">
             <div>
               <p className="font-mono text-xs uppercase tracking-widest text-brand-green">Galleria</p>
               <p className="font-display text-lg font-bold uppercase text-paper sm:text-xl">
@@ -120,7 +119,7 @@ export default function Gallery() {
           </div>
 
           <div className="flex-1 overflow-y-auto overscroll-contain px-4 py-4 sm:px-6 sm:py-6">
-            <div className="mx-auto grid max-w-6xl grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 md:grid-cols-4 lg:gap-4">
+            <div className="container-page grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 md:grid-cols-4 lg:gap-4 xl:grid-cols-5">
               {galleryImages.map((image, index) => (
                 <button
                   key={image.id}
@@ -147,7 +146,7 @@ export default function Gallery() {
 
       {activeIndex !== null && (
         <div
-          className="fixed inset-0 z-[110] flex items-center justify-center bg-ink/90 p-4"
+          className="fixed inset-0 z-[110] flex items-center justify-center bg-ink/90 p-4 lg:p-8"
           role="dialog"
           aria-modal="true"
           aria-label="Foto ingrandita"
@@ -159,7 +158,7 @@ export default function Gallery() {
               e.stopPropagation()
               setActiveIndex((activeIndex - 1 + galleryImages.length) % galleryImages.length)
             }}
-            className="tap-target absolute left-2 top-1/2 hidden -translate-y-1/2 border border-paper/30 p-3 text-paper transition-colors hover:border-brand-green sm:left-4 sm:flex"
+            className="tap-target absolute left-2 top-1/2 hidden -translate-y-1/2 border border-paper/30 p-3 text-paper transition-colors hover:border-brand-green lg:left-8 lg:flex"
             aria-label="Foto precedente"
           >
             <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
@@ -167,13 +166,13 @@ export default function Gallery() {
             </svg>
           </button>
 
-          <figure className="max-h-[85svh] max-w-5xl" onClick={(e) => e.stopPropagation()}>
+          <figure className="max-h-[85svh] w-full max-w-6xl" onClick={(e) => e.stopPropagation()}>
             <img
               src={galleryImages[activeIndex].src}
               alt={galleryImages[activeIndex].alt}
-              className="max-h-[75svh] w-full object-contain"
+              className="mx-auto max-h-[75svh] w-full object-contain"
             />
-            <figcaption className="mt-3 text-center font-mono text-xs uppercase tracking-widest text-paper/70">
+            <figcaption className="mt-4 text-center font-mono text-xs uppercase tracking-widest text-paper/70 lg:text-sm">
               {activeIndex + 1} / {galleryImages.length} — {galleryImages[activeIndex].alt}
             </figcaption>
           </figure>
@@ -184,7 +183,7 @@ export default function Gallery() {
               e.stopPropagation()
               setActiveIndex((activeIndex + 1) % galleryImages.length)
             }}
-            className="tap-target absolute right-2 top-1/2 hidden -translate-y-1/2 border border-paper/30 p-3 text-paper transition-colors hover:border-brand-green sm:right-4 sm:flex"
+            className="tap-target absolute right-2 top-1/2 hidden -translate-y-1/2 border border-paper/30 p-3 text-paper transition-colors hover:border-brand-green lg:right-8 lg:flex"
             aria-label="Foto successiva"
           >
             <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
@@ -195,7 +194,7 @@ export default function Gallery() {
           <button
             type="button"
             onClick={() => setActiveIndex(null)}
-            className="tap-target absolute right-4 top-4 border border-paper/30 p-2 text-paper sm:hidden"
+            className="tap-target absolute right-4 top-4 border border-paper/30 p-2 text-paper lg:hidden"
             aria-label="Chiudi"
           >
             <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
