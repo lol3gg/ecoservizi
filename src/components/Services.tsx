@@ -81,12 +81,6 @@ export default function Services() {
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-steel sm:text-base lg:leading-7">
                   {service.description}
                 </p>
-                <a
-                  href="#contatti"
-                  className="mt-5 hidden w-fit border-b-2 border-brand-green text-sm font-semibold uppercase tracking-wide text-paper transition-colors hover:border-rust hover:text-rust sm:inline-block lg:mt-6"
-                >
-                  Scopri di più →
-                </a>
               </div>
             </article>
           ))}
