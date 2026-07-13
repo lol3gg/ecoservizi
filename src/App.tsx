@@ -1,5 +1,6 @@
 import Header from './components/Header'
 import Hero from './components/Hero'
+import About from './components/About'
 import Services from './components/Services'
 import Materials from './components/Materials'
 import Process from './components/Process'
@@ -17,6 +18,7 @@ export default function App() {
       <Header />
       <main>
         <Hero />
+        <About />
         <Services />
         <Materials />
         <Process />
