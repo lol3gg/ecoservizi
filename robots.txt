@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ecoservizijmc-oss.github.io/ecoservizi/sitemap.xml
